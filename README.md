@@ -7,31 +7,39 @@ This research project investigates the feasibility of integrating wind energy sy
 The study applies statistical modeling using Weibull and Lower-Upper Truncated Weibull Distributions to analyze wind speed data and estimate potential power generation. The data spans over 7 years (2017–2023) and covers 11 airports, with 3 shortlisted based on wind speed and data quality: Porbandar, Rajkot, and Tuticorin.
 
 🎯 Objectives
-Model wind speed distributions using Weibull and Truncated Weibull distributions.
-Evaluate the energy generation potential of wind at selected Indian airports.
-Estimate power output using fitted distributions and energy density equations.
-Assess the feasibility of Savonius Vertical Axis Wind Turbines (VAWT) for deployment.
-Recommend practical hybrid setups for renewable energy generation (Wind & Solar).
+1.Model wind speed distributions using Weibull and Truncated Weibull distributions.
+
+2.Evaluate the energy generation potential of wind at selected Indian airports.
+
+3.Estimate power output using fitted distributions and energy density equations.
+
+4.Assess the feasibility of Savonius Vertical Axis Wind Turbines (VAWT) for deployment.
 
 📍 Data Collection & Preprocessing
 Source: METAR (Meteorological Aerodrome Reports) from Iowa State University's Website.
+
 Time Frame: 2017–2023 (7 years of daily wind speed data with records present for every 30 seconds timeframe).
 
 Locations: 11 Indian airports (e.g., Porbandar, Rajkot, Tuticorin, Chennai, Kolkata).
 
 #Preprocessing Steps:
 Converted wind speed from knots to m/s.
+
 Focused on monsoon months (June–September) where wind energy can supplement solar.
+
 Imputed missing values using ARIMA modeling.
+
 Filtered stations based on average wind speed (>3 m/s) and positive skewness.
 
 📊 Methodology
 1. 📈 ARIMA Modeling
 Used to forecast and impute missing daily wind speed values by leveraging temporal seasonality and trends.
+
 2. 🧮 Maximum Likelihood Estimation (MLE)
 Used to estimate parameters (shape, scale) of:
 Weibull Distribution
 Truncated Weibull Distribution (limits: 3 m/s ≤ WS ≤ 10 m/s)
+
 3. ✅ Goodness-of-Fit Tests
 Kolmogorov-Smirnov (KS) Test: Compared empirical and theoretical CDFs.
 Akaike Information Criterion (AIC): Lower AIC indicates a better fitting model.
@@ -40,13 +48,6 @@ Akaike Information Criterion (AIC): Lower AIC indicates a better fitting model.
 4. ⚡ Mean Energy Density
 Calculated using Mean energy density formula.
 
-⚙️ Case Study: Porbandar Airport
-Best Wind Speed Fit: Truncated Weibull
-Highest Energy Output: ~86.3 kWh/month from 1 VAWT (June)
-Hybrid Setup Inspired by CSMIA (Mumbai) Airport:
-3 Savonius VAWTs (2 kWp) + 8 kWp Solar PV
-
-Estimated Hybrid Output: 1,159 – 1,459 kWh/month at Porbandar
 
 🔋 Energy Use Cases:
 Ground Support Equipment (GSE)
